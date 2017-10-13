@@ -2,16 +2,9 @@ package com.company;
 
 import java.util.Scanner;
 
+import static com.company.Player.player;
+
 public class Main {
-
-    private static String name;
-
-    public static void Name() {
-        Scanner enter = new Scanner(System.in);
-        System.out.print("Welcome, stranger. Please enter your name: ");
-        name = enter.nextLine();
-        System.out.print(name + ", choose your destiny!\n");
-    }
 
     public static void Menu() {
         Scanner enter2 = new Scanner(System.in);
@@ -24,7 +17,7 @@ public class Main {
                 System.out.println("You have entered the dungeon.");
                 break;
             case 2:
-                System.out.printf("Goodbye, %s.", name);
+                System.out.printf("Goodbye, %s.", player.name);
                 break;
             default:
                 System.out.println("You entered wrong option. Please try again.");
@@ -34,7 +27,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Main.Name();
+        Player.Name();
         Main.Menu();
     }
 }
